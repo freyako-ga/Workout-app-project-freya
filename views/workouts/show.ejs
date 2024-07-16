@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= workout.name %></title> npm i method-override morgan
+
+  </head>
+  <body>
+    <h1><%= workout.name %></h1> 
+  
+    <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= workout.name %></button>
+      </form>
+
+    <a href="/workouts/">Back to Workouts</a>
+  </body>
+
+</html>
+
+<form action="/fruits/<%=fruit._id%>?_method=DELETE" method="POST">
+    <button type="submit">Delete <%= fruit.name %></button>
+  </form>
+  <!-- add edit page link here -->
+  <a href="/fruits/<%= fruit._id %>/edit">Edit <%= fruit.name %></a>
+  <a href="/fruits">Back to Fruits</a>
+  
