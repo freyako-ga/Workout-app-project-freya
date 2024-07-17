@@ -1,27 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Exercises Index</title>
-  </head>
-  <body>
-    <h1>All Exercises</h1>
-    <ul>
-      <% workouts.forEach(workout => { %>
-        <li><a href="/workouts/<%= workout._id %>"></a><%= workout.name %></li>
-      <% }); %>
-    </ul>
+</head>
 
-<a href="/workouts">Browse Exercises</a>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+        <h1>All Exercises</h1>
 
-<a href="/workouts/new">Add New Exercise</a>
+        <div class="index-header-div">
+            <h1>All Exercises</h1>
+            <a class="add-workout" href="/workouts/new">Add workout</a>
+        </div>
+        <ul>
+            <% workouts.forEach(workout=> { %>
+                <li><a href="/workouts/<%= workout._id %>">
+                        <a class="workout-cards" href="/workouts/<%=workout._id%>"></a>
+                        <%= workout.name %>,
+                            (<%= workout.description %>)
+                    </a>
+                </li>
+                <% }) %>
+        </ul>
 
-<a href="/fruits/">Back to Exercises</a>
+        <a class="workouts-index-link" href="/workouts">Browse Exercises</a>
 
-  </body>
+        <a href="/workouts/new">Add New Exercise</a>
+
+        <a href="/workouts/">Back to Exercises</a>
+
+</body>
 
 </html>
-
-

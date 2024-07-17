@@ -3,25 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= workout.name %></title> npm i method-override morgan
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title><%= workout.name %></title> 
 
   </head>
   <body>
-    <h1><%= workout.name %></h1> 
-  
+    <%- include('../partials/_navbar.ejs') %>
+    <h1> Name: <%= workout.name %>></h1> 
+  <p>Description: <%=workout.description %></p>
+
+    <div class="workout-details"></div>
     <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
         <button type="submit">Delete <%= workout.name %></button>
       </form>
 
-    <a href="/workouts/">Back to Workouts</a>
+      <a class="workouts-index-link" href="/workouts">
+      <div class="index-link-text">Back to Workouts</div>
+      <div class="workout-actions">
+
+        <form
+          class="delete-form"
+          action="/workouts/<%=workout._id%>?_method=DELETE"
+          method="POST"
+        >
+          <button class="delete-button" type="submit">
+            Delete <%= workout.name %>
+          </button>
+        </form>
+
+        <a class="edit-link" href="/workouts/<%= workout._id %>/edit">
+          <div class="edit-text">Edit <%= workout.name %></div>
+        </a>
+      </div>
   </body>
-
 </html>
-
-<form action="/fruits/<%=fruit._id%>?_method=DELETE" method="POST">
-    <button type="submit">Delete <%= fruit.name %></button>
-  </form>
-  <!-- add edit page link here -->
-  <a href="/fruits/<%= fruit._id %>/edit">Edit <%= fruit.name %></a>
-  <a href="/fruits">Back to Fruits</a>
-  

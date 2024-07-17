@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title><%= workout.name %></title> 
+
+  </head>
+  <body>
+    <h1>Edit <%= workout.name %></h1>
+        <form action="/workouts/<%=workout._id%>?_method=PUT" method="POST"></form>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+    
+        <label for="description">Description</label>
+        <input type="text" name="Description" id="description" />
+ 
+      <button type="submit">Update Exercise</button>
+    </form>
+    <a class="workouts-index-link" href="/workouts/<%= workout._id %>/edit">Edit <%= workout.name %>
+        <div class="index-link-text">Back to Workouts</div>
+        </a>
+  </body>
+
+</html>
+
+<body>
+   

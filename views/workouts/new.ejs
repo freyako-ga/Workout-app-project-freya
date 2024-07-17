@@ -1,22 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Create a Workout</title>
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1>Create a New Workout!</h1>
     <form action="/workouts" method="POST">
       <label for="name">Name:</label>
-      <input type="text" name="name" id="name" />
+      <input type="text" name="name" id="name" required />
   
-      <label for="descripotion">Description</label>
-      <input type="text" name="Description" id="description" />
+      <label for="description">Description</label>
+      <input type="text" name="Description" id="description" required />
   
+<% if (typeof errorMessage !== 'undefined') { %>
+<p class="error"><%= errorMessage %></p>}
+<% } %>
+
       <button type="submit">Add Exercise</button>
     </form>
+    <a href="/workouts/">Back to Workouts</a>
   </body>
-  
+
 </html>

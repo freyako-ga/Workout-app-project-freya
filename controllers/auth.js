@@ -39,7 +39,7 @@ router.get('/sign-in', (req, res) => {
 })
 
 router.post("/sign-in", async (req, res) => {
-    const userIndDatabase = await User.findOne({ username: req.body.username })
+    const userInDatabase = await User.findOne({ username: req.body.username })
     if (!userInDatabase) {
         return res.send('Login failed. Please try again.')
     }
@@ -60,7 +60,7 @@ router.post("/sign-in", async (req, res) => {
     }
     //Once authenticated and session saved, redirect back to the homepage
     req.session.save(() => {
-        res.redirect('/')
+        res.redirect('/workouts')
     })
 });
 

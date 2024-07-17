@@ -1,14 +1,12 @@
-<!-- views/index.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Home Page</title>
 </head>
-
 <body>
 
     <% if (user) { %>
@@ -16,15 +14,17 @@
         <p<a href="/auth/sign-out">Sign out</a></p>
             <% } else { %>
                 <h1>Welcome to the app! </h1>
+                
+                <img class="workout-pic1" src="img/fitness.png">
+                    alt="sit up workout" />
+
                 <p>
                     <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">sign in</a>
                 </p>
                 <% } %>
 
-           
-
-
-
 </body>
+<footer>Icons by <a href="https://www.flaticon.com/authors/freepik">Freekpik</a></footer>
+
 
 </html>
