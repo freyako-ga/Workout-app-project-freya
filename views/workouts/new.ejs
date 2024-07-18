@@ -11,13 +11,14 @@
     <h1>Create a New Workout!</h1>
     <form action="/workouts" method="POST">
       <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required />
+      <input type="text" name="name" id="name" required></input>
   
       <label for="description">Description</label>
-      <input type="text" name="Description" id="description" required />
+      <textarea name="Description" id="description" ></textarea>
+
   
 <% if (typeof errorMessage !== 'undefined') { %>
-<p class="error"><%= errorMessage %></p>}
+<p class="error"><%= errorMessage %></p>
 <% } %>
 
       <button type="submit">Add Exercise</button>

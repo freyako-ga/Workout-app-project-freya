@@ -14,12 +14,12 @@ const workoutSchema = new mongoose.Schema({
 
     description: {
         type: String,
-        required: [true, 'Description is required']
     },
 
   owner: { 
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    required: true
   }
 });
 

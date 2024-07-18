@@ -23,13 +23,13 @@ router.post('/sign-up', async (req, res) => {
         return res.send('Passwords do not match')
     }
 
-
     //3. Hashing plain text password for secuirty purposes. (it defaults to 10 rounds of password tries)
-    req.body.password = bcrypt.hashSync(req.body.password, 12)
+    req.body.password = bcrypt.hashSync(req.body.password, 10)
 
     //4. Create the user document
     const user = await User.create(req.body)
-    return res.send(`Thanks for signing up, ${user.username}`)
+    return res.redirect('/workouts')
+    // return res.send(`Thanks for signing up, ${user.username}`)
 
 })
 
@@ -56,7 +56,8 @@ router.post("/sign-in", async (req, res) => {
     // Add username to session user
 
     req.session.user = {
-        username: userInDatabase.username
+        username: userInDatabase.username,
+        _id: userInDatabase._id
     }
     //Once authenticated and session saved, redirect back to the homepage
     req.session.save(() => {

@@ -20,8 +20,8 @@
             <% workouts.forEach(workout=> { %>
                 <li><a href="/workouts/<%= workout._id %>">
                         <a class="workout-cards" href="/workouts/<%=workout._id%>"></a>
-                        <%= workout.name %>,
-                            (<%= workout.description %>)
+                        <%= workout.name %>:
+                            <%= workout.description %>
                     </a>
                 </li>
                 <% }) %>

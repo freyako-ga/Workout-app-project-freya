@@ -91,7 +91,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
     height: 130px;
     padding: 20px 0;
@@ -119,6 +119,7 @@ body {
   .edit-link {
     text-decoration: none;
   }
+
   
   .edit-text {
     background-color: #2f5795;
@@ -173,7 +174,7 @@ ul {
     color: black;
     width: 40px;
     height: 70px;
-    background-color: white;
+    background-image: url('../img/image.png');
     margin: 10px 15px;
     padding: 30px 50px;
     border-radius: 15px;
