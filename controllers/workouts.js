@@ -107,23 +107,25 @@ router.get("/:workoutId/edit", async (req, res) => {
 
 // update
 
-router.put(":workoutId", async (req, res) => {
+router.put('/:workoutId', async (req, res) => {
   try {
-    const currentUser = await User.findById(req.session.user._id)
-    if (!currentUser) throw new Error('user not found')
-    // Update the exercise in the database
+   const workoutToUpdate = await Workout.findById(req.params.workoutId)
+   if (!workoutToUpdate) throw new Error()
+    
 
-    const workout = currentUser.workouts.id(req.params.workoutId)
-    if (!workout) throw new Error('workout not found')
-    workout.set(req.body)
-    await currentUser.save()
-    res.redirect(`/workouts/${req.params.workoutId}`)
 
-  } catch (error) {
-    console.log(error)
-    res.render('404')
+  //Check ownership
+  if (workoutToUpdate.owner.equals(req.session.user._id)) {
+    await workoutToUpdate.updateOne(req.body)
+    res.redirect(`/workouts/${workoutToUpdate._id}`)
+  } else {
+    //return an error message
+    res.send('You do not have permission to udpate this listing')
   }
-
-});
+} catch (error) {
+  console.log(error)
+  res.redirect('/workouts')
+}
+})
 
 module.exports = router

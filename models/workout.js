@@ -13,7 +13,7 @@ const workoutSchema = new mongoose.Schema({
     },
 
     description: {
-        type: String,
+        type: String
     },
 
   owner: { 

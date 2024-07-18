@@ -167,6 +167,39 @@ ul {
     list-style: none;
   }
   
+
+  .workout-cards {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    width: 200px;  /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    margin: 10px 15px;
+    padding: 20px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid #ffbd59;
+    background-color: #fff; /* Added background color */
+  }
+  
+  .workout-cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adjust as needed */
+    object-fit: cover; /* To ensure the image covers the area */
+  }
+  
+  .card-content {
+    padding: 10px;
+    text-align: center;
+    /* Add additional styling for your content */
+  }
+
+
+
+/* 
   .workout-cards {
     display: flex;
     flex-direction: column;
@@ -191,7 +224,7 @@ ul {
     background-color: #a4cf5f67;
     border: 2.5px solid #ffbd59;
     color: gray;
-  }
+  } */
   
   .index-header-div {
     display: flex;

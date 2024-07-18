@@ -10,28 +10,36 @@
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
-        <h1>All Exercises</h1>
+        <h1>Happy HIIT class!</h1>
 
         <div class="index-header-div">
             <h1>All Exercises</h1>
             <a class="add-workout" href="/workouts/new">Add workout</a>
         </div>
-        <ul>
-            <% workouts.forEach(workout=> { %>
-                <li><a href="/workouts/<%= workout._id %>">
-                        <a class="workout-cards" href="/workouts/<%=workout._id%>"></a>
-                        <%= workout.name %>:
-                            <%= workout.description %>
-                    </a>
-                </li>
-                <% }) %>
-        </ul>
+        <div class="index-workout-cards">
 
-        <a class="workouts-index-link" href="/workouts">Browse Exercises</a>
 
-        <a href="/workouts/new">Add New Exercise</a>
 
-        <a href="/workouts/">Back to Exercises</a>
+            <ul>
+                <% workouts.forEach(workout=> { %>
+                    <li><a href="/workouts/<%= workout._id %>">      </a>
+                            <a class="workout-cards" href="/workouts/<%=workout._id%>"></a>
+                            <%= workout.name %>:
+                                <%= workout.description %>
+                    
+                        <img src="../img/image.png" alt="Workout Image">
+                        <div class="card-content">
+                        </div>
+        </div>
+        </li>
+        <% }) %>
+            </ul>
+            </div>
+            <a class="workouts-index-link" href="/workouts">Browse Exercises</a>
+
+            <a href="/workouts/new">Add New Exercise</a>
+
+            <a href="/workouts/">Back to Exercises</a>
 
 </body>
 
