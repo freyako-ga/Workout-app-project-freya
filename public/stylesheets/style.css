@@ -34,7 +34,6 @@ body {
     border-radius: 10px; 
 }
 
-
   .workouts-index-link {
     text-decoration: none;
   }
@@ -96,6 +95,7 @@ body {
   
   .workout-actions {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     width: 100%;
@@ -171,6 +171,7 @@ ul {
   
   li {
     list-style: none;
+    display: flex;
   }
   
 
@@ -187,6 +188,7 @@ ul {
     align-items: center;
     justify-content: center;
     border: 2.5px solid #ffbd59;
+    background-color: #2f5795;
   }
   
   .workout-cards img {
@@ -197,6 +199,7 @@ ul {
   }
   
   .card-content {
+    display: flex;
     padding: 10px;
     text-align: center;
   }
@@ -221,14 +224,15 @@ ul {
   
   .add-workout {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 20px;
     text-decoration: none;
     width: 6em;
-    text-transform: uppercase;
     background-color: #426496;
     border-radius: 30px;
+    text-transform: uppercase;
     color: white;
     padding: 10px;
     font-weight: bold;
