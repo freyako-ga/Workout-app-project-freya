@@ -112,8 +112,6 @@ router.put('/:workoutId', async (req, res) => {
    const workoutToUpdate = await Workout.findById(req.params.workoutId)
    if (!workoutToUpdate) throw new Error()
     
-
-
   //Check ownership
   if (workoutToUpdate.owner.equals(req.session.user._id)) {
     await workoutToUpdate.updateOne(req.body)

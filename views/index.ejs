@@ -9,21 +9,26 @@
 </head>
 
 <body>
-    <!-- <%- include('./partials/_navbar.ejs') %> -->
+
         <% if (user) { %>
             <h1>Welcome to the app, <%= user.username %>!</h1>
             <p><a href="/auth/sign-out">Sign out</a></p>
             <% } else { %>
-                <h1>Welcome to your fitness app! </h1>
+                <h1> Get your fit together!! </h1>
+                <h3> Welcome to your workout app where you can log your exercise workouts with descriptions to ensure form and technique! </h3>
 
-                <img class="workout-pic1" src="/image/image.png" alt="workout photo">
+                <img class="workout-pic1" src="../images/image1.avif" alt="workout photo">
+      
                 <p>
                     <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">sign in</a>
                 </p>
                 <% } %>
 
+
+
 </body>
-<footer>Icons by <a href="">Freya</a></footer>
+<footer>Icons by <a href="">Freekpik</a></footer>
 
 
 </html>
+

@@ -11,13 +11,17 @@ const workoutSchema = new mongoose.Schema({
     },
 
     description: {
-        type: String
+        type: String,
     },
 
   owner: { 
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
+  },
+
+  image: {
+    type: String,
   }
 });
 

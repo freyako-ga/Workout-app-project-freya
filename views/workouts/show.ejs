@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title><%= workout.name %></title> 
+    <title>
+        <%= workout.name %>
+    </title>
 
-  </head>
-  <body>
+</head>
+
+<body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1> Name: <%= workout.name %>></h1> 
-  <p>Description: <%=workout.description %></p>
+        <h1> Name: <%= workout.name %></h1>
+        <p>Description: <%=workout.description %>
+            <ul>
+        <img src="../images/image2.avif"></img>
 
-    <div class="workout-details"></div>
+        </p>
+    </ul>
 
-      <a class="workouts-index-link" href="/workouts">
-      <div class="index-link-text">Back to Workouts</div>
-      <div class="workout-actions">
+        <div class="workout-details"></div>
 
-        <form
-          class="delete-form"
-          action="/workouts/<%=workout._id%>?_method=DELETE"
-          method="POST"
-        >
-          <button class="delete-button" type="submit">
-            Delete <%= workout.name %>
-          </button>
-        </form>
+        <a class="workouts-index-link" href="/workouts">
+            <div class="index-link-text">Back to Workouts</div>
 
-        <a class="edit-link" href="/workouts/<%= workout._id %>/edit">
-          <div class="edit-text">Edit <%= workout.name %></div>
-        </a>
-      </div>
-  </body>
-</html>  
+            <% if (workout.owner.equals(user._id)) { %>
+
+                <div class="workout-actions">
+
+                    <form class="delete-form" action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
+                        <button class="delete-button" type="submit">
+                            Delete <%= workout.name %>
+                        </button>
+                    </form>
+
+                    <a class="edit-link" href="/workouts/<%= workout._id %>/edit">
+                        <div class="edit-text">Edit <%= workout.name %>
+                        </div>
+                    </a>
+                </div>
+                <% } %>
+
+</body>
+
+</html>

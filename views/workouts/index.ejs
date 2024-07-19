@@ -21,7 +21,7 @@
                     <a class="workout-cards" href="/workouts/<%= workout._id %>">
                         <div class="card-content">
                             <h2><%= workout.name %></h2>
-                        
+        
                         </div>
                     </a>
                 </li>
@@ -38,52 +38,3 @@
 
 
 
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Exercises Index</title>
-</head>
-
-<body>
-    <%- include('../partials/_navbar.ejs') %>
-        <h1>Happy HIIT class!</h1>
-
-        <div class="index-header-div">
-            <h1>All Exercises</h1>
-            <a class="add-workout" href="/workouts/new">Add workout</a>
-        </div>
-        <div class="index-workout-cards">
-
-
-
-            <ul>
-                <% workouts.forEach(workout=> { %>
-                    <li><a href="/workouts/<%= workout._id %>">      </a>
-                            <a class="workout-cards" href="/workouts/<%=workout._id%>"></a>
-                            <%= workout.name %>:
-                                <%= workout.description %>
-            
-                        <div class="card-content">
-                        </div>
-        </div>
-        </li>
-        <% }) %>
-            </ul>
-            </div>
-
-
-            <a class="workouts-index-link" href="/workouts">Browse Exercises</a>
-
-            <a href="/workouts/new">Add New Exercise</a>
-
-            <a href="/workouts/">Back to Exercises</a>
-
-</body>
-
-</html> -->

@@ -27,5 +27,9 @@ module.exports = [
 {
         name: "Lateral Hops",
         description: "Stand with feet together. Jump side to side over an imaginary line or obstacle, landing softly on each hop. Keep your knees slightly bent and core engaged."
+    },
+    {
+        name: "Pull Ups",
+        description: "Pull up on the bar"
     }
 ]
