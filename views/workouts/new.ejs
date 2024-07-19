@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Create a Workout</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Create a New Workout!</h1>
-    <form action="/workouts" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required></input>
-  
-      <label for="description">Description</label>
-      <textarea name="Description" id="description" ></textarea>
+        <h1>Create a New Workout!</h1>
+        <form action="/workouts" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required></input>
 
-  
-<% if (typeof errorMessage !== 'undefined') { %>
-<p class="error"><%= errorMessage %></p>
-<% } %>
+            <label for="description">Description</label>
+            <textarea name="Description" id="description"></textarea>
 
-      <button type="submit">Add Exercise</button>
-    </form>
-    <a href="/workouts/">Back to Workouts</a>
-  </body>
+
+            <% if (typeof errorMessage !=='undefined' ) { %>
+                <p class="error">
+                    <%= errorMessage %>
+                </p>
+                <% } %>
+
+                    <button type="submit">Add Exercise</button>
+        </form>
+        <a href="/workouts/">Back to Workouts</a>
+</body>
 
 </html>

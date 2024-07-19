@@ -25,9 +25,17 @@ body {
     padding: 10px;
   }
   
+
   .workout-pic1 {
-    height: 30%;
-  }
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto; /* Center the image and add margin */
+    border-radius: 10px; /* Optional: add rounded corners */
+
+}
+
+
   .workouts-index-link {
     text-decoration: none;
   }
@@ -156,7 +164,7 @@ body {
 
 
   
-  /* index styling */
+
 
 ul {
     display: flex;
@@ -173,41 +181,8 @@ ul {
     flex-direction: column;
     text-decoration: none;
     color: black;
-    width: 200px;  /* Adjusted width */
-    height: 300px; /* Adjusted height */
-    margin: 10px 15px;
-    padding: 20px;
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-    border: 2.5px solid #ffbd59;
-    background-color: #fff; /* Added background color */
-  }
-  
-  .workout-cards img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px; /* Adjust as needed */
-    object-fit: cover; /* To ensure the image covers the area */
-  }
-  
-  .card-content {
-    padding: 10px;
-    text-align: center;
-    /* Add additional styling for your content */
-  }
-
-
-
-/* 
-  .workout-cards {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: black;
-    width: 40px;
-    height: 70px;
-    background-image: url('../img/image.png');
+    width: 40px;  
+    height: 70px; 
     margin: 10px 15px;
     padding: 30px 50px;
     border-radius: 15px;
@@ -215,7 +190,52 @@ ul {
     justify-content: center;
     border: 2.5px solid #ffbd59;
   }
+
+
+
+/* 
+  .index-workout-cards {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+}
+
+.index-workout-cards ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; /* Center the cards horizontally */
+/* }
+
+.index-workout-cards li {
+    margin: 10px;
+}
+ */ 
+
+
+
+
+
+
+
+
+
+
   
+  .workout-cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    object-fit: cover; 
+  }
+  
+  .card-content {
+    padding: 10px;
+    text-align: center;
+  }
+
   .workout-cards:hover {
     border: 4px solid #f47b5b;
   }
@@ -224,7 +244,7 @@ ul {
     background-color: #a4cf5f67;
     border: 2.5px solid #ffbd59;
     color: gray;
-  } */
+  } 
   
   .index-header-div {
     display: flex;
