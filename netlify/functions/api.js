@@ -7,21 +7,18 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
-const Workout = require('../../models/workout.js')
-const User = require('../../models/user.js')
-const path = require('path')
 const serverless = require('serverless-http')
 
 // Controllers / routes
-const authController = require('./controllers/auth.js')
-const workoutsController = require('./controllers/workouts.js')
-const passUserToView = require('./middleware/pass-user-to-view.js')
-const isSignedIn = require('./middleware/is-signed-in.js')
+const authController = require('../../controllers/auth.js')
+const workoutsController = require('../../controllers/workouts.js')
+const passUserToView = require('../../middleware/pass-user-to-view.js')
+const isSignedIn = require('../../middleware/is-signed-in.js')
 
 // Constants
 const app = express()
 
-
+mongoose.connect(process.env.MONGODB_URI)
 mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}.`)
 })
@@ -66,5 +63,6 @@ app.get('*', (req,res) => {
 })
 
 // Connections
+
+
 module.exports.handler = serverless(app)
-connect()
