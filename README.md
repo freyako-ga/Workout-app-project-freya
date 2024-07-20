@@ -18,6 +18,10 @@ HTML
 CSS
 MongoDB Atlas
 
+Deployment link:
+https://main--getyourfiton.netlify.app/
+
+
 
 Next steps: Planned future enhancements (stretch goals).
 Future enhancements may involve adding a favorites feature whereby users can favorite the ones they particularly find effective or enjoy. 
