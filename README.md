@@ -11,6 +11,14 @@ Images external resources
 https://unsplash.com/
 https://freepik.com/
 
+
+Planning: 
+https://trello.com/b/0pl1e67W/workout-app
+
+Wireframe:
+https://excalidraw.com/
+
+
 Technologies used: 
 Javascript
 EJS
@@ -20,6 +28,8 @@ MongoDB Atlas
 
 Deployment link:
 https://main--getyourfiton.netlify.app/
+
+Wins: Full CRUD functionality. 
 
 
 
